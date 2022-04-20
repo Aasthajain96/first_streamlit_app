@@ -6,3 +6,5 @@ streamlit.text('Omega 3 & Plain Sandwich')
 streamlit.text('Orange & Veg Sandwich')
 streamlit.text('Paratha with Curd & Lassi')
 streamlit.text('Avocado Sandwich')
+
+streamlit.header('Build your own fruit smoothie')
