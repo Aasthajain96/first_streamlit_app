@@ -17,5 +17,8 @@ my_fruit_list  = pandas.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.c
 # Lets put up a list here so that they can pick up the fruit they want to include
 streamlit.multiselect('pickup fruits for your smoothie :',list(my_fruit_list.index))
 
+#using set index we are converting index from numbers to fruits
+my_fruit_list = my_fruit_list.set_index('fruit')
+
 #displaying the content of our dataframe 'my_fruit_list'
 streamlit.dataframe(my_fruit_list)
