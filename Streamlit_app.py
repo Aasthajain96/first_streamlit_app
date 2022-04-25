@@ -28,6 +28,7 @@ streamlit.dataframe(fruits_to_show)
 
 
 import requests
+from requests.exceptions import ConnectionError
 #new section to display fruityvise api response
 try:
    fruityvise_response =requests.get("https://fruityvise.com/api/fruit/watermelon")
