@@ -25,15 +25,3 @@ fruits_to_show = my_fruit_list.loc[fruits_selected]
 
 #displaying the content of our dataframe 'my_fruit_list'
 streamlit.dataframe(fruits_to_show)
-
-
-import requests
-from requests.exceptions import ConnectionError
-#new section to display fruityvise api response
-try:
-   fruityvise_response =requests.get("https://fruityvise.com/api/fruit/watermelon")
-
-except ConnectionError as e:    # This is the correct syntax
-   print (e)
-   r = "No response"
-#streamlit.text(fruityvise_reponse)
