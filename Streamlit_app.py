@@ -29,7 +29,8 @@ streamlit.dataframe(fruits_to_show)
 
 import requests
 #new section to display fruityvise api response
-fruityvise_response =requests.get("https://fruityvise.com/api/fruit/watermelon")
+try:
+   fruityvise_response =requests.get("https://fruityvise.com/api/fruit/watermelon")
 
 except ConnectionError as e:    # This is the correct syntax
    print e
