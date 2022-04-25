@@ -2,6 +2,8 @@ import streamlit
 #Imported Panda package
 import pandas
 
+import requests
+
 streamlit.title("My Mom's New Healthy Diner")
 streamlit.header('Breakfast Favorites')
 streamlit.text('Omega 3 & Plain Sandwich')
@@ -25,3 +27,9 @@ fruits_to_show = my_fruit_list.loc[fruits_selected]
 
 #displaying the content of our dataframe 'my_fruit_list'
 streamlit.dataframe(fruits_to_show)
+
+
+#New Section to Display fruityvise api response
+
+fruityvice_respose = requests.get("https://fruityvice.com/api/fruit/watermelon")
+streamlit.text(fruityvice_response)
