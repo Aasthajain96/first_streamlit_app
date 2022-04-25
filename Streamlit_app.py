@@ -34,6 +34,6 @@ try:
    fruityvise_response =requests.get("https://fruityvise.com/api/fruit/watermelon")
 
 except ConnectionError as e:    # This is the correct syntax
-   print e
+   print (e)
    r = "No response"
 #streamlit.text(fruityvise_reponse)
