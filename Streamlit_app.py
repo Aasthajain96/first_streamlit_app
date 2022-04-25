@@ -27,7 +27,7 @@ fruits_to_show = my_fruit_list.loc[fruits_selected]
 streamlit.dataframe(fruits_to_show)
 
 
-Import requests
+import requests
 #new section to display fruityvise resquest's response
 fruityvise_response =requests.get("https://fruityvise.com/api/fruit/watermelon")
 streamlit.text(fruityvise_reponse)
